@@ -8,16 +8,36 @@ Do you work with since-epoch timestamped data and constantly find yourself openi
 
 ### Setup:
 
-We're working on reducing dependencies, but since the original implementation needed to be quick for this to make any sense to work on, we took two shortcuts:
-* `xsel` (available on brew and apt)
-* `node` (available [here](https://nodejs.org/en/))
-* [Optional] `jest` if you want to run the tests.
+For now we depend on `node` for portability. We recommend using [nvm](https://github.com/nvm-sh/nvm) to install.
 
-#### On Ubuntu
+The Linux setup also depends on `xsel` and `xmessage` which may have shipped with your distro, but if not, you can install them with `apt`.
+
+[Optional] Install `jest` if you want to run the tests.
+
+#### On Linux (tested on Ubuntu 18.04)
 * Clone this repo.
-* Install the dependencies.
+* Install `node`, `xsel`, and `xmessage` if you don't already have them.
 * Go to Settings > Devices > Keyboard, and add a keyboard shortcut that runs `/<absolute>/<path>/<to>/run.sh` 
 * To use, highlight a timestamp and key in your keyboard shortcut!
 
-#### On Mac
-TODO(mike)
+#### On Mac (tested on Big Sur 11.6.5)
+* Clone this repo.
+* Install `node`.
+* Open automator and create a new Quick Action automation that receives text from any application, and does not replace the selected text.
+* First block is the following bash script (inputs as arguments):
+```
+echo "$(/<absolute path to your installation of>/node /<absolute path to this repo>/src/timestamp_helper.js $*)"
+```
+* Second block is the following javascript to display the output:
+```
+function run(input, parameters) {
+	var app = Application.currentApplication()
+	app.includeStandardAdditions = true
+	app.displayDialog(input.join("\n"))
+	return input;
+}
+```
+* Save the script as "Timestamp Helper", or whatever name you prefer.
+![Example](assets/mac_example.png)
+* Add a shortcut for this new service in `System Preferences` > `Keyboard` > `Shortcuts` > `Services`.
+* Use your new keyboard shortcut to translate selected timestamps.
