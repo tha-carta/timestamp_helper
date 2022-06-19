@@ -17,7 +17,7 @@ The Linux setup also depends on `xsel` and `xmessage` which may have shipped wit
 #### On Linux (tested on Ubuntu 18.04)
 * Clone this repo.
 * Install `node`, `xsel`, and `xmessage` if you don't already have them.
-* Go to Settings > Devices > Keyboard, and add a keyboard shortcut that runs `/<absolute>/<path>/<to>/run.sh` 
+* Go to Settings > Devices > Keyboard, and add a keyboard shortcut that runs `/<absolute>/<path>/<to>/translate_selection.sh` 
 * To use, highlight a timestamp and key in your keyboard shortcut!
 
 #### On Mac (tested on Big Sur 11.6.5)
