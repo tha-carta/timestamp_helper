@@ -8,6 +8,11 @@ Do you work with since-epoch timestamped data and constantly find yourself openi
 
 ### Setup:
 
+We're working on reducing dependencies, but since the original implementation needed to be quick for this to make any sense to work on, we took two shortcuts:
+* `xsel` (available on brew and apt)
+* `node` (available [here](https://nodejs.org/en/))
+* [Optional] `jest` if you want to run the tests.
+
 #### On Ubuntu
 TODO(mike)
 

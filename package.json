@@ -1,0 +1,25 @@
+{
+  "name": "timestamp_helper",
+  "version": "1.0.0",
+  "description": "Timestamp translation tools",
+  "main": "src/timestamp_helper.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tha-carta/timestamp_helper.git"
+  },
+  "author": "Mike Carter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tha-carta/timestamp_helper/issues"
+  },
+  "homepage": "https://github.com/tha-carta/timestamp_helper#readme",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}
