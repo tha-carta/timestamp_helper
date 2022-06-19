@@ -14,7 +14,10 @@ We're working on reducing dependencies, but since the original implementation ne
 * [Optional] `jest` if you want to run the tests.
 
 #### On Ubuntu
-TODO(mike)
+* Clone this repo.
+* Install the dependencies.
+* Go to Settings > Devices > Keyboard, and add a keyboard shortcut that runs `/<absolute>/<path>/<to>/run.sh` 
+* To use, highlight a timestamp and key in your keyboard shortcut!
 
 #### On Mac
 TODO(mike)
